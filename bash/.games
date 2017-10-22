@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#  game related functions
+
+function start-dwarf-fortress {
+  cd /opt/DwarfFortress
+  bash df &
+}
+
+function start-world-of-warcraft {
+  wine /opt/WoW/WoW.exe
+}
+
+function world-of-warcraft-switch-to-kronos {
+  sudo unlink /opt/WoW/realmlist.wtf
+  echo "set realmlist login.kronos-wow.com" >> /opt/WoW/realmlist.wtf
+  echo realmlist is set to Kronos
+}
+
+function world-of-warcraft-switch-to-elysium {
+  sudo unlink /opt/WoW/realmlist.wtf
+  echo "set realmlist logon.elysium-project.org" >> /opt/WoW/realmlist.wtf
+  echo realmlist is set to Elysium
+}
+

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#  other functions
+
+function bash-refresh-functions {
+  source ~/.bash_functions
+}
