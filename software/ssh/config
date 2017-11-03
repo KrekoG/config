@@ -1,0 +1,4 @@
+Host lily
+	Hostname Lily
+	User pi
+	IdentityFile ~/.ssh/Lily

@@ -3,7 +3,7 @@
 #  lily related functions
 
 function lily-ssh {
-  ssh pi@Lily $@
+  ssh lily $@
 }
 
 function lily-show-temperature {
