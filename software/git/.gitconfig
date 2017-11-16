@@ -1,7 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-#	name = KrekoG
-#	email = krekog@gmail.com
+	name = KrekoG
+	email = kreko.gergely@gmail.com
 [core]
 	editor = vim
