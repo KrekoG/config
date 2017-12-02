@@ -1,39 +1,59 @@
 #!/bin/bash
 
-#  lily related functions
+# DHT22
 
-function lily-ssh {
-  ssh lily $@
+function dht22-temp() {
+  python ~/dev/therm/therm.py 2> /dev/null
 }
 
-function lily-show-temperature {
-  lily-ssh 'source .bash_functions && dht22-temp'
+function dht22-humi() {
+  python ~/dev/therm/humi.py 2> /dev/null
 }
 
-function lily-show-humidity {
-  lily-ssh 'source .bash_functions && dht22-humi'
+# Outlet controlling radio signals
+
+# unused:
+# button 3, on  10176619
+# button 3, on  10176618
+# button 4, off 10176615
+# button 4, off 10176614
+
+function turn-on-heating {
+  # button 1, on 10176623
+  send-radio-signal 10176623
+  echo done
 }
 
-function lily-turn-on-heating {
-  lily-ssh 'source .bash_functions && turn-on-heating'
+function turn-off-heating {
+  # button 1, off 10176622
+  send-radio-signal 10176622
+  echo done
 }
 
-function lily-turn-off-heating {
-  lily-ssh 'source .bash_functions && turn-off-heating'
+function turn-on-kitchen {
+   # button 2, on 10176621
+  send-radio-signal 10176621
+  echo done
 }
 
-function lily-turn-on-kitchen {
-  lily-ssh 'source .bash_functions && turn-on-kitchen'
+function turn-off-kitchen {
+   # button 2, on 10176620
+  send-radio-signal 10176620
+  echo done
 }
 
-function lily-turn-off-kitchen {
-  lily-ssh 'source .bash_functions && turn-off-kitchen'
+function turn-on-all {
+   # button all, on 10176610
+  send-radio-signal 10176610
+  echo done
 }
 
-function lily-turn-on-all {
-  lily-ssh 'source .bash_functions && turn-on-all'
+function turn-off-all {
+   # button all, off 10176609
+  send-radio-signal 10176609
+  echo done
 }
 
-function lily-turn-off-all {
-  lily-ssh 'source .bash_functions && turn-off-all'
+function send-radio-signal {
+  python3 ~/dev/radio/rpi-rf_send.py -g 17 -p 180 -t 1 $1
 }

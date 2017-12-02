@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#  lily related functions
+
+function lily-ssh {
+  ssh lily $@
+}
+
+function lily-show-temperature {
+  lily-ssh 'source .bash_functions && dht22-temp'
+}
+
+function lily-show-humidity {
+  lily-ssh 'source .bash_functions && dht22-humi'
+}
+
+function lily-turn-on-heating {
+  lily-ssh 'source .bash_functions && turn-on-heating'
+}
+
+function lily-turn-off-heating {
+  lily-ssh 'source .bash_functions && turn-off-heating'
+}
+
+function lily-turn-on-kitchen {
+  lily-ssh 'source .bash_functions && turn-on-kitchen'
+}
+
+function lily-turn-off-kitchen {
+  lily-ssh 'source .bash_functions && turn-off-kitchen'
+}
+
+function lily-turn-on-all {
+  lily-ssh 'source .bash_functions && turn-on-all'
+}
+
+function lily-turn-off-all {
+  lily-ssh 'source .bash_functions && turn-off-all'
+}
