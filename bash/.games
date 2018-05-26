@@ -8,7 +8,11 @@ function start-dwarf-fortress {
 }
 
 function start-world-of-warcraft {
-  wine /opt/WoW/WoW.exe
+  optirun wine /opt/WoW/WoW.exe
+}
+
+function start-tbc-world-of-warcraft {
+  optirun wine /opt/WoW-TBC/Wow.exe
 }
 
 function world-of-warcraft-switch-to-kronos {
