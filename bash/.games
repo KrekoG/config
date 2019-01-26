@@ -7,6 +7,11 @@ function start-dwarf-fortress {
   bash df &
 }
 
+function start-lnp-dwarf-fortress {
+  cd /opt/LinuxLNP-0.43.05-r07
+  bash startlnp & 
+}
+
 function start-world-of-warcraft {
   optirun wine /opt/WoW/WoW.exe
 }
