@@ -30,6 +30,14 @@ function lily-turn-off-kitchen {
   lily-ssh 'source .bash_functions && turn-off-kitchen'
 }
 
+function lily-turn-on-vr {
+  lily-ssh 'source .bash_functions && turn-on-vr'
+}
+
+function lily-turn-off-vr {
+  lily-ssh 'source .bash_functions && turn-off-vr'
+}
+
 function lily-turn-on-all {
   lily-ssh 'source .bash_functions && turn-on-all'
 }
