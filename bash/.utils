@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Utilities
+
+function utils-feem {
+  /opt/Feem/Feem_v4.3.0_For_Linux.AppImage
+}
