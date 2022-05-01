@@ -13,7 +13,7 @@ function start-lnp-dwarf-fortress {
 }
 
 function start-world-of-warcraft {
-  optirun wine /opt/WoW/WoW.exe
+  wine /opt/WoW/WoW.exe
 }
 
 function start-tbc-world-of-warcraft {
