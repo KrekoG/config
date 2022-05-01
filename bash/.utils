@@ -5,3 +5,5 @@
 function utils-feem {
   /opt/Feem/Feem_v4.3.0_For_Linux.AppImage
 }
+
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
