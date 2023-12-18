@@ -4,11 +4,7 @@ scripts to make migrating my system easier.
 
 ## install packages
 
-- `sudo apt-get install sudo tilda git vim`
-
-## tilda
-
-- `cp ./software/tilda/config_0 ~/.config/tilda/config_0`
+- `sudo apt-get install sudo tilda git vim tmux ranger fzf batcat tldr`
 
 ## ssh
 
@@ -18,4 +14,9 @@ scripts to make migrating my system easier.
 ## git
 
 - `cp ./software/git/.gitconfig ~/.gitconfig`
+
+## tmux
+
+- `cp ./software/tmux/.config/tmux-powerline ~/.config/tmux-powerline`
+- `cp ./software/tmux/.tmux.conf ~/.tmux.conf`
 
